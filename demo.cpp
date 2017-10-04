@@ -31,5 +31,8 @@ int main()
   MPI_Get_processor_name(processor_name, &name_len);
 
   std::cout << "Hello world from processor " << processor_name << ", rank " << world_rank << " out of " << world_size << " processors" << std::endl;
+
+  // finalize the environment
+  MPI_Finalize();
 }
 
